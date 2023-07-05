@@ -2,6 +2,8 @@
 
 In Kubernetes, an Ingress is an object that allows access to Kubernetes services from outside the Kubernetes cluster. You can configure access by creating a collection of rules that define which inbound connections reach which services.
 
+A Kubernetes Ingress is a robust way to expose Kubernetes services outside the cluster. It lets you consolidate your routing rules to a single resource, and gives a powerful options for configuring these rules, by allowing an API Gateway style of traffic routing.
+
 An Ingress can be configured to give Services externally-reachable URLs, load balance traffic, terminate SSL/TLS, and offer name-based virtual hosting. Ingress lets you configure an HTTP load balancer for applications running on Kubernetes, represented by one or more Kubernetes internal Services.
 
 An Ingress controller is responsible for fulfilling the Ingress, usually with a load balancer, though it may also configure your edge router or additional frontends to help handle the traffic.
@@ -15,3 +17,19 @@ Ingress controllers:
 - You can deploy any number of ingress controllers within a cluster.
 - There are many different Ingress controllers, and there’s support for cloud-native load balancers (from GCP, AWS, and Azure).
 e.g. Nginx, Ambassador, EnRoute, HAProxy, AWS ALB, AKS Application Gateway
+
+To be noted:
+
+- Ingress is an API object that manages external access to the services in a cluster, typically HTTP. It means you can use Ingress to make your Service accessible from outside.
+- Ingress is not a Service type, but it acts as the entry point for the cluster.
+- Ingress offers a simplistic gateway type solutions.
+- Ingress lets you consolidate your routing rules into a single resource and expose multiple services under the same IP address, using the same load balancers.
+- Ingress also enables configuration of resilience (time-outs, rate limiting), content-based routing, authentication and much more.
+
+Use cases:
+
+- Externally reachable URLs for applications deployed in Kubernetes clusters.
+- Load balancing rules and traffic, as well as TLS/SSL termination for each hostname, such as foo.example.com.
+- Content-based routing:
+  - Host-based routing. For example, routing requests with the host header foo.example.com to one group of services and the host header bar.example.com to another group.
+  - Path-based routing. For example, routing requests with the URI that starts with /serviceA to service A and requests with the URI that starts with /serviceB to service B.
