@@ -47,7 +47,6 @@ Follow the Minikube Instructions in OneNote
 
 
 3. Enable Ingress on Minikube
-
 ```
 minikube addons enable ingress 
 ```
@@ -62,7 +61,7 @@ kubectl apply -f .
 kubectl get pods -o wide
 ```
 
-6. Since we don't actually have a domain name we can the OS behavious by changing the /etc/hosts file and adding the below
+6. Since we don't actually have a domain name we can the OS behavior by changing the /etc/hosts file and adding the below
 
 Make sure your on sudo 
 ```
