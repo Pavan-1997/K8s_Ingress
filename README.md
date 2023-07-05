@@ -40,7 +40,7 @@ Use cases:
 
 1. Create the Kubernetes cluster using Minikube 
 
-Follow the Minikube Instructions in OneNote 
+    Follow the Minikube Instructions in OneNote 
 
 
 2. Clone the repo for manifest files
@@ -63,7 +63,7 @@ kubectl get pods -o wide
 
 6. Since we don't actually have a domain name we can the OS behavior by changing the /etc/hosts file and adding the below
 
-Make sure your on sudo 
+    Make sure your on sudo 
 ```
 <IP-Address> foo.bar.com
 ```
