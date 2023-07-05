@@ -33,3 +33,49 @@ Use cases:
 - Content-based routing:
   - Host-based routing. For example, routing requests with the host header foo.example.com to one group of services and the host header bar.example.com to another group.
   - Path-based routing. For example, routing requests with the URI that starts with /serviceA to service A and requests with the URI that starts with /serviceB to service B.
+
+---
+
+# Creating Ingress - Nginx for Host and Path-based routing in Minikube
+
+1. Create the Kubernetes cluster using Minikube 
+
+Follow the Minikube Instructions in OneNote 
+
+
+2. Clone the repo for manifest files
+
+
+3. Enable Ingress on Minikube
+
+minikube addons enable ingress 
+
+
+4. Now deploy all the manifest files in the repo 
+
+kubectl apply -f .
+
+
+5. To view the information about the pods running in a Kubernetes cluster, including additional details such as node name and IP address. 
+
+kubectl get pods -o wide
+
+
+6. Since we don't actually have a domain name we can the OS behavious by changing the /etc/hosts file and adding the below
+
+Make sure your on sudo 
+
+<IP-Address> foo.bar.com
+
+
+7. Check the domain name by pinging
+
+ping foo.bar.com
+
+
+8. Access the application locally 
+
+curl -l http://foo.bar.com/bar -v
+
+
+
