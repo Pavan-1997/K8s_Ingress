@@ -60,6 +60,10 @@ kubectl apply -f .
 ```
 kubectl get pods -o wide
 ```
+![image](https://github.com/Pavan-1997/K8s_Ingress_Info/assets/32020205/c1b5c4f6-510d-4606-9532-df377d98ce97)
+
+![image](https://github.com/Pavan-1997/K8s_Ingress_Info/assets/32020205/a1e50af0-8439-42c4-8dbe-fe48458fac0c)
+
 
 6. Since we don't actually have a domain name we can the OS behavior by changing the /etc/hosts file and adding the below
 
@@ -72,6 +76,8 @@ kubectl get pods -o wide
 ```
 ping foo.bar.com
 ```
+![image](https://github.com/Pavan-1997/K8s_Ingress_Info/assets/32020205/d09ed095-2dc0-4126-87d0-b8cc224698cc)
+
 
 8. Access the application locally 
 ```
