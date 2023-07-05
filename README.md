@@ -77,5 +77,6 @@ ping foo.bar.com
 ```
 curl -l http://foo.bar.com/bar -v
 ```
+![image](https://github.com/Pavan-1997/K8s_Ingress_Info/assets/32020205/a91760da-36f6-4a2b-a1b5-6f7cd2739296)
 
 
